@@ -1,0 +1,391 @@
+html {
+    box-sizing: border-box;
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* body */
+body {
+    font-size: 2rem; 
+}
+
+/* ------------------Contenedor 1 ------------------------- */
+/* media query para desktop */
+/* div */
+@media (min-width: 1200px) {
+    /* body */
+    body {
+        background-image: linear-gradient(to right,#609ED4 0%, #609ED4 70%, #FFFFFF 70%, #FFFFFF 100%);
+    }
+
+    /* div */
+    .panel {
+        display: flex;
+    }
+
+    /* div */
+    .contenedor1 {
+        width: 70%;
+    }
+
+    /* div */
+    .contenedor2 {
+        width: 30%;
+    }
+}
+
+/* div */
+.contenedor1 {
+    background-color: #609ED4;
+}
+
+/* header */
+/* img */
+.logo {
+    margin: 2rem 0 2rem -2rem;
+}
+
+/* tex-area */
+.area-texto {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    height: 20rem;
+    border: 3px solid #0A3871;
+    font-size: 3rem;
+    border-radius: 2rem;
+    color: #0A3871;
+    box-shadow: 11px -1px 32px 7px rgba(10,56,113,0.59);
+}
+
+/* p */
+.informacion-parrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    text-align: center;
+    color: white;
+    margin: 1.5rem 2rem;
+}
+
+/* p::before */
+.informacion-parrafo::before {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/Informacion.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* media query para tablet */
+@media (min-width: 768px) {
+
+    /* tex-area */
+    .area-texto {
+        width: 80%;
+    }
+
+    /* p */
+    .informacion-parrafo {
+        font-size: 2.5rem;
+    }
+}
+
+/* media query para desktop */
+@media (min-width: 1200px) {
+
+    /* tex-area */
+    .area-texto {
+        width: 50%;
+        height: 30rem;
+    }
+}
+
+/* ----- botones ----- */
+/* div */
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* div */
+/* media query para tablet */
+@media (min-width: 768px) {
+    .botones {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+/* button */
+.boton {
+    width: 90%;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform .3s;
+    margin: 1rem 0;
+}
+
+/* button */
+/* media query para tablet */
+@media (min-width: 768px) {
+    .boton {
+        width: 40%;
+    }
+}
+
+/* button::hoover */
+.boton:hover {
+    transform: scale(1.1);
+}
+
+/* button */
+.boton-encriptar {
+    background-color: #0A3871;
+    color: #FFFFFF;
+    position: relative;
+}
+
+/* button */
+.boton-desencriptar {
+    color: #0A3871;
+    position: relative;
+}
+
+/* img */
+.icono {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+}
+
+/* img */
+.posicion-icono-encriptador,
+.posicion-icono-desencriptador {
+    top: 17%;
+    left: 81%;
+}
+
+@media (min-width: 1200px) {
+    .botones {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+    /* button */
+    .boton {
+        font-size: 1.8rem;
+        width: 30%;
+    }
+
+    /* img */
+    .icono {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    /* img */
+    .posicion-icono-encriptador,
+    .posicion-icono-desencriptador {
+        top: 27%;
+        left: 81%;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+/* ------------------Contenedor 2 ------------------------- */
+/* div */
+.contenedor2 {
+    background-color: white;
+}
+
+/* div */
+.contenedor-mensaje-encriptado {
+    margin: 0 auto 0 auto;
+    padding: 3rem 2rem 0 2rem;
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 3rem;
+    position: relative;
+}
+
+/* textarea */
+#text-area2 {
+    visibility: hidden;
+    width: 100%;
+    margin: 0 0 3rem 0;
+}
+
+/* img */
+.imagenes {
+    position: absolute;
+}
+
+/* img */
+.imagen1 {
+    width: 70%;
+    top: 3rem;
+}
+
+/* img */
+.imagen2 {
+    top: 27rem;
+    left: 8rem;
+}
+
+/* div */
+.imagen-parrafo-encript-desencript {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: -5rem;
+    visibility: hidden;
+}
+
+.imagen-encriptado-desencriptado {
+    width: 4rem;
+    height: 4rem;
+}
+
+#texto-encriptar-desencriptar {
+    color: #33FF77;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* media query para tablet */
+@media (min-width: 768px) {
+    #text-area2 {
+        width: 85%;
+        margin-top: 3rem;
+    }
+
+    .imagen1 {
+        width: 45%;
+        left: 38rem;
+    }
+
+    .imagen2 {
+        top: 18rem;
+    }
+}
+
+/* media query para desktop */
+@media (min-width: 1200px) {
+
+    .contenedor-mensaje-encriptado {
+        margin-top: 14rem;
+        margin-bottom: 5rem;
+    }
+    #text-area2 {
+        width: 95%;
+        margin-top: 3rem;
+        background-color: #0A3871;
+        color: #FFFFFF;
+    }
+
+    .imagen1 {
+        width: 50%;
+        top: -5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .imagen2 {
+        top: 28rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+/* button */
+.boton-copiar {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+/* img */
+.posicion-icono-copiar {
+    top: 18%;
+    left: 80%;
+}
+
+@media (min-width: 1200px) {
+
+    .boton-copiar {
+        margin-top: 5rem;
+        background-color: #0A3871;
+        color: white;
+        width: 60%;
+    }
+
+    .posicion-icono-copiar {
+        top: 25%;
+        left: 80%;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+/* ------------------ Footer ------------------------- */
+
+/* footer */
+.footer {
+    background-color: #154c79;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* media query para tablet */
+@media (min-width: 768px) {
+    /* footer */
+    .footer {
+        font-size: 1.8rem;
+    }
+}
+
+/* media query para desktop */
+@media (min-width: 1200px) {
+    /* footer */
+    .footer {
+        margin-top: 0;
+        width: 70%;
+        height: 10%;
+    }
+}
