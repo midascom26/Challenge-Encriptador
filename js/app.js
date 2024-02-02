@@ -40,9 +40,8 @@ function esConsonanteOEspacioEnBlanco(letra) {
 // Función para restringir caracteres en el textarea.
 // Sólo acepta letras en minúscula y sin acento y espacio en blanco
 function soloLetrasMinusculasYEspacioEnBlanco(elEvento) {
-    let evento = elEvento || window.Event || TouchEvent;
+    let evento = elEvento || window.Event;
     let codigoCaracter = evento.charCode || evento.keyCode;
-    console.log(`tecla presionbada ${codigoCaracter}`);
     if ((codigoCaracter >= 97 && codigoCaracter <= 122) || codigoCaracter == 32) {
         return true;
     }
@@ -147,27 +146,7 @@ function botonDesencriptar() {
     }
 }
 
-function soloLetrasMinusculasYEspacioEnBlanco2(evento) {
-    const campoTexto = document.getElementById("text-area");
-    campoTexto.addEventListener(evento, (event) => {
-        console.log(`tecla presionada ${event.key}`)
-        if((event.key >= 97 && event.key <= 122) || event.key == 32) {
-            alert(`tecla presionada ${event.key}`);
-            return true;
-        }
-    });
-    return false;
-}
 
-function soloLetrasMinusculasYEspacioEnBlanco3(elEvento) {
-    let evento = elEvento || window.Event || TouchEvent;
-    let codigoCaracter = evento.charCode || evento.keyCode;
-    console.log(`tecla presionbada ${codigoCaracter}`);
-    if ((codigoCaracter >= 97 && codigoCaracter <= 122) || codigoCaracter == 32) {
-        return true;
-    }
-    return false;
-}
 
 
 
