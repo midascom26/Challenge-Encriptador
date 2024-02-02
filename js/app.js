@@ -40,7 +40,7 @@ function esConsonanteOEspacioEnBlanco(letra) {
 // Función para restringir caracteres en el textarea.
 // Sólo acepta letras en minúscula y sin acento y espacio en blanco
 function soloLetrasMinusculasYEspacioEnBlanco(elEvento) {
-    let evento = elEvento || window.Event;
+    let evento = elEvento || window.Event || TouchEvent;
     let codigoCaracter = evento.charCode || evento.keyCode;
     if ((codigoCaracter >= 97 && codigoCaracter <= 122) || codigoCaracter == 32) {
         return true;
